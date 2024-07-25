@@ -19,7 +19,7 @@ const AboutSection = () => {
 
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
+          <p className="text-sm leading-relaxed lg:text-lg">
             A frontend web developer with a passion for creating interactive and
             responsive web applications, experienced in JavaScript, React, HTML,
             CSS, and Git, always eager to expand my knowledge and collaborate
