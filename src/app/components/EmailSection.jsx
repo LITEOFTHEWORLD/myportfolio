@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
+import { HiOutlineMail } from "react-icons/hi";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -56,11 +57,14 @@ const EmailSection = () => {
           try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="github.com">
+          <Link target="_blank" href="https://github.com/LITEOFTHEWORLD">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="linkedin.com">
-            <Image src={LinkedinIcon} alt="Linkedin Icon" />
+          <Link href="https://www.linkedin.com/in/kosu-layefa-1864a62b0">
+            <Image src={LinkedinIcon} alt="Linkedin" />
+          </Link>
+          <Link href="https://kosuruth100@gmail.com">
+            <HiOutlineMail style={{ fontSize: "50px" }} />
           </Link>
         </div>
       </div>
@@ -84,7 +88,7 @@ const EmailSection = () => {
                 id="email"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="jacob@google.com"
+                placeholder="Enter your email"
               />
             </div>
             <div className="mb-6">

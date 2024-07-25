@@ -7,55 +7,35 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "/images/projects/1.png",
+    title: "techblackgirl.vercel.app",
+    content: "Blog Website",
+    description:
+      "Insightful articles, expert opinions, engaging stories. Your go-to destination for inspiration.",
+    image: "/images/projects/potfolio1.png",
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
-    image: "/images/projects/2.png",
+    title: "Mobosure.com",
+    content: "Online Repair Website",
+    description:
+      "Expert repairs for electronics. Fast, reliable, convenient. Book online today.",
+    image: "/images/projects/potfolio2.png",
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
   },
-  {
-    id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
-    image: "/images/projects/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
+
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
+    title: "themovieapi-dusky.vercel.app",
+    content: "Movie site",
+    description:
+      "Latest blockbusters,classic films, reviews, trailers. Your ultimate cinema destination ",
+    image: "/images/projects/potfolio3.png",
     tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -117,6 +97,7 @@ const ProjectsSection = () => {
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              content={project.content}
             />
           </motion.li>
         ))}
