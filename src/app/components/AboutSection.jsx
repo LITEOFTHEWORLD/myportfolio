@@ -29,7 +29,7 @@ const AboutSection = () => {
             A frontend web developer with a passion for creating interactive and
             responsive web applications, experienced in JavaScript, React, HTML,
             CSS, and Git, always eager to expand my knowledge and collaborate
-            with others, with a love for exploring Nigeria's culture, reading,
+            with others, with a love for exploring Nigeria culture, reading,
             music, and cooking. I am a quick learner and I am always looking to
             expand my knowledge and skill set. I am a team player and I am
             excited to work with others to create amazing applications.
