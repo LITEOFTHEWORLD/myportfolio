@@ -19,24 +19,24 @@ const EmailSection = () => {
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/send";
 
-    // Form the request for sending data to the server.
     const options = {
-      // The method is POST because we are sending data.
       method: "POST",
-      // Tell the server we're sending JSON.
       headers: {
         "Content-Type": "application/json",
       },
-      // Body of the request is the JSON data we created above.
       body: JSONdata,
     };
 
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
-
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
+    try {
+      const response = await fetch(endpoint, options);
+      if (response.status === 200) {
+        setEmailSubmitted(true);
+      } else {
+        const result = await response.json();
+        console.error("Error:", result.message);
+      }
+    } catch (error) {
+      console.error("Error:", error);
     }
   };
 
@@ -51,7 +51,6 @@ const EmailSection = () => {
           Let&apos;s Connect
         </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          {" "}
           I&apos;m currently looking for new opportunities, my inbox is always
           open. Whether you have a question or just want to say hi, I&apos;ll
           try my best to get back to you!
@@ -61,9 +60,9 @@ const EmailSection = () => {
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
           <Link href="https://www.linkedin.com/in/kosu-layefa-1864a62b0">
-            <Image src={LinkedinIcon} alt="Linkedin" />
+            <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
-          <Link href="https://kosuruth100@gmail.com">
+          <Link href="mailto:kosuruth100@gmail.com">
             <HiOutlineMail style={{ fontSize: "50px" }} />
           </Link>
         </div>
